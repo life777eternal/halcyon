@@ -1180,7 +1180,7 @@ namespace OpenSim.Framework.Communications
             }
         }
 
-        private void CreateInventorySkel(UserProfileData userProf)
+        public void CreateInventorySkel(UserProfileData userProf)
         {
             IInventoryProviderSelector inventorySelect = ProviderRegistry.Instance.Get<IInventoryProviderSelector>();
             IInventoryStorage storage = inventorySelect.GetProvider(userProf.ID);

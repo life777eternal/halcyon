@@ -391,7 +391,9 @@ namespace OpenSim.Framework.Communications.Services
                                 "[LOGIN END]: Error retrieving inventory skeleton of agent {0} - {1}",
                                 agentID, e);
 
-                            return logResponse.CreateLoginInventoryFailedResponse();
+
+                            m_userManager.CreateInventorySkel(userProfile);
+                            // return logResponse.CreateLoginInventoryFailedResponse();
                         }
 
                         if (inventData != null)
